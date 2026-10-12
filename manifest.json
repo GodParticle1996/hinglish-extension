@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Hinglish Padho — English to Hinglish Translator",
+  "version": "1.0.0",
+  "description": "One-click English to Hinglish translator with ADHD mode: key sentences highlighted, key terms bold. Groq + NVIDIA NIM free models.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>", "https://api.groq.com/*", "https://integrate.api.nvidia.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hinglish me Padho"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

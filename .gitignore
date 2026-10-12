@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+dist/
+build/
+.next/
+vu_output/
+*.webm
+*.mkv
+.DS_Store
+*.log

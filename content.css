@@ -1,0 +1,19 @@
+/* Hinglish Reader — injected styles */
+
+/* ADHD mode: soft-yellow key-sentence highlights + bold key terms */
+[data-h="1"] mark {
+  background: #FFF3B0;
+  color: inherit;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+[data-h="1"] b { font-weight: 750; }
+#hinglish-bar {
+  position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 2147483647; background: #1a73e8; color: #fff;
+  font: 600 14px/1.4 system-ui, sans-serif;
+  padding: 10px 16px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.25);
+  display: flex; align-items: center; gap: 12px; max-width: 90vw;
+}
+#hinglish-bar .h-track { width: 120px; height: 8px; background: rgba(255,255,255,.3); border-radius: 99px; overflow: hidden; }
+#hinglish-bar .h-fill { height: 100%; background: #fff; border-radius: 99px; transition: width .3s; }

@@ -1,0 +1,103 @@
+/* Hinglish Reader — Forest Sage, calm minimal, compact */
+:root {
+  --cream: #F6F4EE;
+  --card: #FFFFFF;
+  --ink: #22312A;
+  --muted: #6F7F76;
+  --line: #E4E8E2;
+  --forest: #2D4A3E;
+  --forest-deep: #1E332B;
+  --sage: #DCE7DE;
+  --moss: #6FA287;
+  --status-bg: #EDF3EE;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.wrap { width: 300px; padding: 14px 14px 12px; }
+
+.brand { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+.leaf {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--sage); display: flex; align-items: center; justify-content: center;
+}
+h1 { font-size: 16px; margin: 0; font-weight: 650; letter-spacing: 0.01em; }
+.sub { margin: 2px 0 0; color: var(--muted); font-size: 12px; }
+
+.progress {
+  height: 3px; background: var(--sage); border-radius: 99px;
+  overflow: hidden; margin: 2px 0 12px;
+}
+.progress-fill {
+  height: 100%; width: 0%; background: var(--forest);
+  border-radius: 99px; transition: width 0.35s ease;
+}
+
+.primary {
+  width: 100%; padding: 11px; font-size: 14px; font-weight: 650;
+  border: none; border-radius: 10px; background: var(--forest);
+  color: #fff; cursor: pointer; letter-spacing: 0.01em;
+}
+.primary:hover { background: var(--forest-deep); }
+.primary:disabled { opacity: 0.55; cursor: wait; }
+
+.secondary {
+  width: 100%; margin-top: 7px; padding: 9px; font-size: 13px;
+  border-radius: 10px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); cursor: pointer;
+}
+.secondary:hover { border-color: var(--moss); }
+
+.status {
+  min-height: 18px; font-size: 12px; color: var(--ink);
+  background: var(--status-bg); border-radius: 8px;
+  padding: 7px 9px; margin: 10px 0;
+}
+
+.toggles { display: flex; gap: 8px; margin: 0 0 10px; }
+.toggle {
+  flex: 1; display: flex; gap: 8px; align-items: flex-start;
+  background: var(--card); border: 1px solid var(--line);
+  padding: 8px 9px; border-radius: 10px; cursor: pointer;
+}
+.toggle input { width: 14px; height: 14px; margin-top: 2px; accent-color: var(--forest); }
+.toggle-text strong { display: block; font-size: 12px; }
+.toggle-text small { display: block; font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+.settings {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 9px 10px; font-size: 12px;
+}
+.settings summary { cursor: pointer; font-weight: 650; font-size: 12px; }
+.field-label {
+  display: block; margin: 9px 0 4px; font-weight: 600;
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--muted);
+}
+select, input {
+  width: 100%; padding: 8px 9px; border-radius: 8px;
+  border: 1px solid var(--line); font-size: 12.5px; background: #fff; color: var(--ink);
+}
+select:focus, input:focus { outline: 1px solid var(--moss); border-color: var(--moss); }
+
+.btnrow { display: flex; gap: 7px; margin-top: 10px; }
+.mini-primary {
+  flex: 1; padding: 8px; border-radius: 8px; border: none;
+  background: var(--forest); color: #fff; font-weight: 650; font-size: 12.5px; cursor: pointer;
+}
+.mini-primary:hover { background: var(--forest-deep); }
+.mini {
+  flex: 1; padding: 8px; border-radius: 8px; font-size: 12.5px;
+  border: 1px solid var(--line); background: #fff; color: var(--forest);
+  font-weight: 650; cursor: pointer;
+}
+.mini:hover { border-color: var(--moss); }
+
+.hint { color: var(--muted); font-size: 11px; line-height: 1.55; margin: 9px 0 2px; }
